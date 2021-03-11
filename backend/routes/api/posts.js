@@ -6,16 +6,16 @@ const Posts = require('../../models/Posts.js');
 
 
 //routes api
-router.get('/',  postsController.getPosts );
+router.get('/getPosts/:id',  postsController.getPosts );
 
 //get a single post
-router.get('/:id',postsController.getPost )
+router.get('/getPost/:id',postsController.getPost )
 
-router.delete('/:id',postsController.deletePost)
+router.delete('/deletePost/:id',postsController.deletePost)
 
-router.patch('/:id',postsController.updatePost)
+router.patch('/updatePost/:id',postsController.updatePost)
 
 
-router.post('/', postsController.createPost);
+router.post('/createPost', postsController.createPost);
 
 module.exports = router;

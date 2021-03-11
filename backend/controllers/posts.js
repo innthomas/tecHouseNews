@@ -14,8 +14,8 @@ const createPost = (req, res) => {
   });
 };
 
-const getPost = (req, res) => {
-  postSchema.find({_id: req.params.id}, (err, results) => {
+const getPost = async (req, res) => {
+  await postSchema.find({_id: req.params.id}, (err, results) => {
     if (err) {
       console.log(err);
       res.status(500).json({message: err});
@@ -25,8 +25,8 @@ const getPost = (req, res) => {
   });
 };
 
-const getPosts = (req,res)=>{
-     postSchema.find();
+const getPosts = async (req,res)=>{
+    await postSchema.find();
     if (err) {
       console.log(err);
       res.status(500).json({message: err});
