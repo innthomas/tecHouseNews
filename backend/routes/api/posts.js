@@ -6,7 +6,7 @@ const Posts = require('../../models/Posts.js');
 
 
 //routes api
-router.get('/getPosts/:id',  postsController.getPosts );
+router.get('/getPosts/',  postsController.getPosts );
 
 //get a single post
 router.get('/getPost/:id',postsController.getPost )
